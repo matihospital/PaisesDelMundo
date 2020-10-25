@@ -1,0 +1,12 @@
+.card {
+    width: 18rem;
+    background-color: #dfe6e9;
+}
+
+.row{
+    justify-content: center;
+}
+
+.container-fluid{
+    padding: 2em;
+}
