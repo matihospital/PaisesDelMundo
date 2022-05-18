@@ -10,7 +10,7 @@ export class PaisesService {
   resourceUrl: string;
 
   constructor(private httpClient: HttpClient) {
-    this.resourceUrl = 'https://restcountries.eu/rest/v2/all';
+    this.resourceUrl = 'https://restcountries.com/v2/all';
   }
 
   getPaises() {

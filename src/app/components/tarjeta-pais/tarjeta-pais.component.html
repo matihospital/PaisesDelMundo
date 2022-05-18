@@ -3,13 +3,17 @@
     <div class="card text-center" *ngFor="let item of Items">
         <div class="card-body">       
             <h5 class="card-title">{{item.name}}</h5>
-            <img src={{item.flag}} class="card-img-top" alt="Bandera">
-            <h6>Capital</h6>
-            <p class="card-text">{{item.capital}}</p>
-            <h6>Moneda</h6>
-            <p class="card-text">{{item.currencies[0].name}}</p>
-            <h6>Cant. de Habitantes</h6>
-            <p class="card-text">{{item.population | number}}</p>
+            <img src={{item.flags.png}} class="card-img-top" alt="Bandera">
+            <div *ngIf="item.capital">
+              <h6>Capital</h6>
+              <p class="card-text" >{{item.capital}}</p>
+            </div>
+            <div *ngIf="item.currencies">
+             <h6>Moneda</h6>
+              <p class="card-text">{{item.currencies[0].name }}</p>
+            </div>  
+              <h6>Cant. de Habitantes</h6>            
+              <p class="card-text">{{item.population | number}}</p>
         </div>
     </div>
   </div>

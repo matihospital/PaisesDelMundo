@@ -11,7 +11,7 @@ import { PaisesService  } from 'src/app/services/paises.service'
 export class TarjetaPaisComponent implements OnInit {
 
   Items: Pais[] = [] ;
-
+  
   constructor(private PaisesService : PaisesService) { }
 
   ngOnInit(): void {
@@ -20,7 +20,10 @@ export class TarjetaPaisComponent implements OnInit {
 
   getPaises(){
     this.PaisesService.getPaises().subscribe(
-      (res:Pais[] )=> {this.Items = res}
+      (res:Pais[] )=> {
+        this.Items = res;
+        console.log(res)
+      }
     );
   }
 
